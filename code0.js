@@ -68,7 +68,7 @@ gdjs.s2Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(
 gdjs.s2Code.condition0IsTrue_0.val = false;
 {
 {gdjs.s2Code.conditionTrue_1 = gdjs.s2Code.condition0IsTrue_0;
-gdjs.s2Code.conditionTrue_1.val = context.triggerOnce(208548884);
+gdjs.s2Code.conditionTrue_1.val = context.triggerOnce(206310844);
 }
 }if (gdjs.s2Code.condition0IsTrue_0.val) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "oh1.ogg", true, 100, 1);
@@ -260,8 +260,26 @@ gdjs.s2Code.condition0IsTrue_0.val = false;
 gdjs.s2Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(context.clearEventsObjectsMap().addObjectsToEventsMap("contar2", gdjs.s2Code.GDcontar2Objects1).getEventsObjectsMap(), runtimeScene, true, false);
 }if (gdjs.s2Code.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.s2Code.GDcontar2Objects1.length ;i < len;++i) {
-    gdjs.s2Code.GDcontar2Objects1[i].setString("salio2");
+    gdjs.s2Code.GDcontar2Objects1[i].setString("in2");
+
+   llamar_android();
     window.location.assign("https://noenadies.github.io/androidawebnotibar/");
+}
+}}
+
+}
+
+
+{
+
+gdjs.s2Code.GDcontar2Objects1.createFrom(runtimeScene.getObjects("contar2"));
+
+gdjs.s2Code.condition0IsTrue_0.val = false;
+{
+gdjs.s2Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(context.clearEventsObjectsMap().addObjectsToEventsMap("contar2", gdjs.s2Code.GDcontar2Objects1).getEventsObjectsMap(), runtimeScene, true, true);
+}if (gdjs.s2Code.condition0IsTrue_0.val) {
+{for(var i = 0, len = gdjs.s2Code.GDcontar2Objects1.length ;i < len;++i) {
+    gdjs.s2Code.GDcontar2Objects1[i].setString("salio2");
 }
 }}
 

@@ -67,7 +67,7 @@ gdjs.s1Code.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(
 gdjs.s1Code.condition0IsTrue_0.val = false;
 {
 {gdjs.s1Code.conditionTrue_1 = gdjs.s1Code.condition0IsTrue_0;
-gdjs.s1Code.conditionTrue_1.val = context.triggerOnce(208557236);
+gdjs.s1Code.conditionTrue_1.val = context.triggerOnce(206312932);
 }
 }if (gdjs.s1Code.condition0IsTrue_0.val) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "oh1.ogg", true, 100, 1);
@@ -250,8 +250,28 @@ gdjs.s1Code.condition0IsTrue_0.val = false;
 gdjs.s1Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(context.clearEventsObjectsMap().addObjectsToEventsMap("contar", gdjs.s1Code.GDcontarObjects1).getEventsObjectsMap(), runtimeScene, true, false);
 }if (gdjs.s1Code.condition0IsTrue_0.val) {
 {for(var i = 0, len = gdjs.s1Code.GDcontarObjects1.length ;i < len;++i) {
+    gdjs.s1Code.GDcontarObjects1[i].setString("in");
+
+  //  alert(777777777);
+    llamar_android();
+    window.location.assign("https://noenadies.github.io/androidawebnotibar/");
+}
+}}
+
+}
+
+
+{
+
+gdjs.s1Code.GDcontarObjects1.createFrom(runtimeScene.getObjects("contar"));
+
+gdjs.s1Code.condition0IsTrue_0.val = false;
+{
+gdjs.s1Code.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(context.clearEventsObjectsMap().addObjectsToEventsMap("contar", gdjs.s1Code.GDcontarObjects1).getEventsObjectsMap(), runtimeScene, true, true);
+}if (gdjs.s1Code.condition0IsTrue_0.val) {
+{for(var i = 0, len = gdjs.s1Code.GDcontarObjects1.length ;i < len;++i) {
     gdjs.s1Code.GDcontarObjects1[i].setString("salio");
-     window.location.assign("https://noenadies.github.io/androidawebnotibar/");
+
 }
 }}
 

